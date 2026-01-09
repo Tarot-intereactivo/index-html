@@ -59,6 +59,30 @@
         {n: "El Sol", i: "el sol.png", r: "Éxito y claridad.", d: "Yo soy luz, éxito y alegría pura."},
         {n: "El Juicio", i: "el juicio.png", r: "Renacimiento espiritual.", d: "Respondo al llamado de mi propósito."},
         {n: "El Mundo", i: "el mundo.png", r: "Realización total.", d: "Soy uno con la danza del universo."}
+// --- ARCANOS MENORES ---
+        // BASTOS
+        {n: "As de Bastos", i: "as de bastos.png", r: "Energía pura.", d: "Empiezo este proyecto con pasión."},
+        {n: "Dos de Bastos", i: "dos de bastos.png", r: "Planificación.", d: "El mundo está en mis manos."},
+        {n: "Sota de Bastos", i: "sota de bastos.png", r: "Noticias emocionantes.", d: "Recibo la chispa de la inspiración."},
+        {n: "Rey de Bastos", i: "rey de bastos.png", r: "Liderazgo.", d: "Transformo mi visión en realidad."},
+
+        // COPAS
+        {n: "As de Copas", i: "as de copas.png", r: "Amor naciente.", d: "Mi copa rebosa de bendiciones."},
+        {n: "Dos de Copas", i: "dos de copas.png", r: "Conexión sagrada.", d: "Atraigo relaciones en equilibrio."},
+        {n: "Diez de Copas", i: "diez de copas.png", r: "Felicidad familiar.", d: "Vivo en armonía con mis seres queridos."},
+        {n: "Reina de Copas", i: "reina de copas.png", r: "Empatía divina.", d: "Escucho mi corazón con amor."},
+
+        // ESPADAS
+        {n: "As de Espadas", i: "as de espadas.png", r: "Claridad mental.", d: "La verdad me hace libre."},
+        {n: "Tres de Espadas", i: "tres de espadas.png", r: "Sanación del dolor.", d: "Suelto lo que hiere para sanar."},
+        {n: "Rey de Espadas", i: "rey de espadas.png", r: "Justicia y lógica.", d: "Actúo con objetividad y poder."},
+
+        // OROS (PENTÁCULOS)
+        {n: "As de Oros", i: "as de oros.png", r: "Prosperidad física.", d: "La abundancia llega a mi vida."},
+        {n: "Nueve de Oros", i: "nueve de oros.png", r: "Independencia.", d: "Disfruto los frutos de mi esfuerzo."},
+        {n: "Rey de Oros", i: "rey de oros.png", r: "Maestría material.", d: "Soy un imán para el éxito financiero."}
+        
+        // Puedes seguir esta lógica para completar las 78 exactamente con el nombre de tu foto
     ];
 
     function draw() {
