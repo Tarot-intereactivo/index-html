@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="no-referrer">
+    <title>Baram Rex - Oráculo Sagrado</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Garamond&display=swap');
+        body { background: #0a0a0a; color: #e0e0e0; font-family: 'Garamond', serif; text-align: center; padding: 20px; margin: 0; }
+        .container { max-width: 500px; margin: auto; border: 1px solid rgba(212, 175, 55, 0.3); padding: 25px; border-radius: 20px; background: rgba(10, 10, 10, 0.95); box-shadow: 0 0 50px rgba(0,0,0,1); }
+        .gold-text { font-family: 'Cinzel', serif; color: #d4af37; text-transform: uppercase; letter-spacing: 3px; }
+        .card-img { width: 100%; max-width: 280px; border-radius: 15px; border: 2px solid #d4af37; box-shadow: 0 0 20px rgba(212, 175, 55, 0.4); margin-bottom: 20px; }
+        .btn-draw { background: linear-gradient(135deg, #d4af37, #aa892f); color: black; padding: 18px 35px; border: none; border-radius: 50px; font-weight: bold; cursor: pointer; font-size: 1.1rem; font-family: 'Cinzel', serif; width: 100%; }
+        .btn-premium { display: block; background: #d4af37; color: black !important; text-decoration: none; padding: 15px; margin-top: 25px; border-radius: 10px; font-weight: bold; font-family: 'Cinzel', serif; text-transform: uppercase; }
+        .wisdom-box { background: rgba(255, 255, 255, 0.05); border-left: 3px solid #d4af37; padding: 15px; margin-top: 20px; text-align: left; border-radius: 0 10px 10px 0; }
+        #result { display: none; animation: fadeIn 0.8s; }
+        @keyframes fadeIn { from {opacity: 0;} to {opacity: 1;} }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1 class="gold-text">Baram Rex</h1>
+    <p style="font-style: italic; opacity: 0.8;">"El destino no es azar, es vibración."</p>
+    <div id="intro">
+        <button class="btn-draw" onclick="draw()">REVELAR MI DESTINO</button>
+    </div>
+    <div id="result">
+        <div id="card-display"></div>
+        <div id="card-info"></div>
+    </div>
+</div>
+
+<script>
+    const cards = [
+        {n: "El Loco", i: "El-loco.png", r: "Inicio y aventura.", d: "Confío en mi viaje sagrado."},
+        {n: "El Mago", i: "El-mago.png", r: "Poder creativo.", d: "Tengo las herramientas para triunfar."},
+        {n: "La Sacerdotisa", i: "La-sacerdotiza.png", r: "Intuición profunda.", d: "Escucho mi voz interior."},
+        {n: "La Emperatriz", i: "La-emperatriz.png", r: "Abundancia.", d: "Merezco la belleza."},
+        {n: "El Emperador", i: "el-emperador.png", r: "Autoridad.", d: "Gobierno mi destino."},
+        {n: "La Fuerza", i: "LA-FUERZA.jpg", r: "Coraje.", d: "Domino mis sombras."},
+        {n: "La Muerte", i: "La-muerte.png", r: "Renacimiento.", d: "Muero al pasado."},
+        {n: "El Sol", i: "El-sol.png", r: "Éxito total.", d: "Yo soy luz pura."},
+        {n: "El Mundo", i: "el-mundo.png", r: "Plenitud.", d: "Soy uno con el todo."},
+        {n: "El Diablo", i: "El-diablo.png", r: "Apegos.", d: "Me libero de mis miedos."},
+        {n: "La Torre", i: "La-torre.png", r: "Liberación.", d: "Construyo sobre la verdad."},
+        {n: "Rey de Bastos", i: "REY-DE-BASTOS.png", r: "Liderazgo.", d: "Mi visión crea realidades."}
+        // Puedes añadir más siguiendo el mismo formato
+    ];
+
+    function draw() {
+        const card = cards[Math.floor(Math.random() * cards.length)];
+        const miTelefono = "573224058597"; // CAMBIA ESTO POR TU NÚMERO
+        const waLink = "https://wa.me/" + miTelefono + "?text=Hola Baram Rex, mi carta es " + card.n;
+
+        document.getElementById('intro').style.display = 'none';
+        document.getElementById('result').style.display = 'block';
+        document.getElementById('card-display').innerHTML = `<img src="./${card.i}" class="card-img">`;
+        document.getElementById('card-info').innerHTML = `
+            <h2 class="gold-text">${card.n}</h2>
+            <p><strong>🔱 Revelación:</strong> ${card.r}</p>
+            <div class="wisdom-box"><p>" ${card.d} "</p></div>
+            <a href="${waLink}" target="_blank" class="btn-premium">CONSULTA PERSONALIZADA</a>
+            <br><button onclick="location.reload()" style="background:none; border:none; color:#d4af37; cursor:pointer; margin-top:10px;">Volver a intentar</button>
+        `;
+    }
+</script>
+</body>
+</html>
